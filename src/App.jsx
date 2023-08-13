@@ -35,6 +35,7 @@ function App() {
           //============================
           // ЗАГРУЗКА ФАЙЛОВ ПО ПОЛУЧЕННОЙ ССЫЛКЕ
           .then((data) => {
+            console.log(data.data.href);
             axios
               .put(data.data.href, file, {
                 headers: {
