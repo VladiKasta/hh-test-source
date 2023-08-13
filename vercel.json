@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "https://cloud-api.yandex.net/",
+      "source": "https://cloud-api.yandex.net/(*.)",
       "destination": "/api/cors.js"
     }
   ]
