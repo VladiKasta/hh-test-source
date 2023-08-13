@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { YandexLogin, YandexLogout } from "react-yandex-login";
 import axios from "axios";
+import allowCors from "../cors.js";
 const clientID = "4a1e129494ca4c99b064a397159174c1";
 
 function App() {
@@ -77,7 +78,9 @@ function App() {
             multiple
             onChange={(event) => setFiles(event.target.files)}
           />
-          <button onClick={uploadFiles}>Загрузить файлы на диск</button>
+          <button onClick={allowCors(uploadFiles)}>
+            Загрузить файлы на диск
+          </button>
         </div>
       )}
       {ready && <>ЗАГРУЗКА ЗАВЕРШЕНА</>}
